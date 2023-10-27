@@ -1,0 +1,48 @@
+body{
+    background-color:wheat;
+    color:lightcoral;
+}
+nav ul{
+    display:flex;
+    flex-wrap:wrap;
+    margin:0;
+    padding:0;
+    z-index:10;
+}
+nav li{
+    list-style:none;
+    background-color:lightcoral;
+    color:wheat;
+    margin:0;
+    flex:1;
+    min-width:200px;
+    text-align:center;
+    display:flex;
+    position:relative;
+}
+nav a, nav a:visited{
+    text-decoration:none;
+    width:100%;
+    padding:8px 0;
+    color:wheat;
+}
+nav a:hover, nav a.active{
+    color:rgba(234, 77, 77, 1);
+    background-color:rgba(244, 164, 164, 1);
+}
+.dropdown-content{
+    position:absolute;
+    top:37px;
+    width:100%;
+    display:none;
+    z-index:20;
+}
+nav li:hover .dropdown-content{
+    display:block;
+}
+.dropdown-content a{
+    font-weight:bold;
+}
+.dropdown-content ul{
+    flex-direction:column;
+}
